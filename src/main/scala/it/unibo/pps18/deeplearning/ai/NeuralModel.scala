@@ -3,20 +3,22 @@ package it.unibo.pps18.deeplearning.ai
 import it.unibo.pps18.deeplearning.entities.Dataset._
 import it.unibo.pps18.deeplearning.entities.NeuralNetwork._
 
+import scala.collection.mutable.ListBuffer
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import scala.concurrent.ExecutionContext.Implicits.global
+
 import scalaz.std.stream._
+
 import org.nd4j.linalg.factory.Nd4j
 import org.nd4j.linalg.api.ndarray.INDArray
+import org.nd4s.Implicits.DoubleArrayMtrix2INDArray
+
 import com.thoughtworks.feature.Factory
 import com.thoughtworks.deeplearning.plugins.Builtins
 import com.thoughtworks.deeplearning.plugins.INDArrayWeights
 import com.thoughtworks.each.Monadic._
 import com.thoughtworks.future._
-import org.nd4s.Implicits.DoubleArrayMtrix2INDArray
-
-import scala.collection.mutable.ListBuffer
 
 /** Object to perform forecasting of a time series using NeuralModel.scala library. */
 object NeuralModel {
@@ -133,6 +135,7 @@ object NeuralModel {
       }
     }
 
+    // Denormalize values.
     val denormalizedPredictions: List[Double] = dataset.denormalize(predictionsList)
     val denormalizedForecasting: List[Double] = dataset.denormalize(forecastByTime.toList.last).takeRight(elementsToPredict + 1)
 

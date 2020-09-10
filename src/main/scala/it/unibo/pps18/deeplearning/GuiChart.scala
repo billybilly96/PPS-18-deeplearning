@@ -3,6 +3,7 @@ package it.unibo.pps18.deeplearning
 import it.unibo.pps18.deeplearning.utils.CsvReader.getDataFromCsv
 import it.unibo.pps18.deeplearning.ai.NeuralModel.getForecasting
 import it.unibo.pps18.deeplearning.entities.Dataset.TimeSeriesDataset
+
 import scalafx.application.JFXApp
 import scalafx.application.JFXApp.PrimaryStage
 import scalafx.collections.ObservableBuffer
