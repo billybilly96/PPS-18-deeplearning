@@ -9,7 +9,7 @@ class DatasetTest extends FunSpec {
 
   val data: List[Double] = List(1,2,3,4,5,6,7,8,9)
   val nPast: Int = 2
-  val trainTestSplit: Double = 0.6
+  val trainTestSplit: Double = 0.5
   val dataset = TimeSeriesDataset(data, nPast, trainTestSplit)
 
   describe("A dataset") {
