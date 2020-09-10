@@ -25,7 +25,7 @@ object NeuralModel {
    *
    *  @param dataset the dataset to use for forecasting
    *  @param elementsToPredict the number of future values to forecast
-   *  @return a tuple composed of the neural model predictions on the test set and forecasted values.
+   *  @return a tuple composed of the neural model predictions on the test set and the forecasted values.
    */
   def getForecasting(dataset: TimeSeriesDataset, elementsToPredict: Int): (List[Double], List[Double]) = {
 
