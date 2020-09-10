@@ -1,0 +1,4 @@
+[debug] "not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/Users/billy/Documents/MAGISTRALE/1_ANNO/PPS/PPS-18-DeepLearning/"), "pps-18-deeplearning")...
+[debug] Done updating ProjectRef(uri("file:/Users/billy/Documents/MAGISTRALE/1_ANNO/PPS/PPS-18-DeepLearning/"), "pps-18-deeplearning")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
